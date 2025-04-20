@@ -6,8 +6,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <!-- 将 Spring Boot 的版本号切换成 2.6 版本 -->
-        <version>2.6.3</version>
+        <version>3.4.4</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
@@ -20,7 +19,6 @@
     <!-- 多模块项目父工程打包模式必须指定为 pom -->
     <packaging>pom</packaging>
 
-    <!-- 子模块管理 -->
     <!-- 子模块管理 -->
     <modules>
         <!-- 入口模块 -->
@@ -36,13 +34,14 @@
     <properties>
         <!-- 项目版本号 -->
         <revision>0.0.1-SNAPSHOT</revision>
-        <java.version>1.8</java.version>
+        <java.version>17</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <!-- 依赖包版本 -->
         <lombok.version>1.18.28</lombok.version>
         <guava.version>31.1-jre</guava.version>
         <commons-lang3.version>3.12.0</commons-lang3.version>
+        <jackson.version>2.15.2</jackson.version>
 
         <!-- Maven 相关 -->
         <maven.compiler.source>${java.version}</maven.compiler.source>
@@ -76,6 +75,19 @@
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-lang3</artifactId>
                 <version>${commons-lang3.version}</version>
+            </dependency>
+
+            <!-- Jackson -->
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-core</artifactId>
+                <version>${jackson.version}</version>
             </dependency>
         </dependencies>
 
