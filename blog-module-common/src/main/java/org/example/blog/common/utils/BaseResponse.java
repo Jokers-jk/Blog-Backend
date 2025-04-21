@@ -1,34 +1,34 @@
-package org.example.blog.blogmodulecommon.utils;
+package org.example.blog.common.utils;
 
 import lombok.Data;
-import org.example.blog.blogmodulecommon.common.StatusCode;
+import org.example.blog.common.common.StatusCode;
 
 import java.io.Serializable;
 
 @Data
 public class BaseResponse<T> implements Serializable {
 
-    private int code;
+    private String code;
 
     private T data;
 
     private String message;
 
-    private BaseResponse(int code, T data, String message) {
+    public BaseResponse(String code, T data, String message) {
         this.code = code;
         this.data = data;
         this.message = message;
     }
 
-    public BaseResponse(int code) {
+    public BaseResponse(String code) {
         this(code, null, "");
     }
 
-    public BaseResponse(int code, T data) {
+    public BaseResponse(String code, T data) {
         this(code, data, "");
     }
 
-    public BaseResponse(int code, String message) { this(code, null, message); }
+    public BaseResponse(String code, String message) { this(code, null, message); }
 
     public BaseResponse(StatusCode statusCode) {
         this(statusCode.getCode(), null, statusCode.getMessage());

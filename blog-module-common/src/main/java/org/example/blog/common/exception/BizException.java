@@ -1,4 +1,4 @@
-package org.example.blog.blogmodulecommon.exception;
+package org.example.blog.common.exception;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -7,7 +7,7 @@ import lombok.Setter;
 @Setter
 public class BizException extends RuntimeException {
 
-    private Integer code;
+    private String code;
 
     private String message;
 

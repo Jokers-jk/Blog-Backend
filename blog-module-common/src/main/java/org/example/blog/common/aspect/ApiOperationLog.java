@@ -1,4 +1,4 @@
-package org.example.blog.blogmodulecommon.aspect;
+package org.example.blog.common.aspect;
 
 import java.lang.annotation.*;
 

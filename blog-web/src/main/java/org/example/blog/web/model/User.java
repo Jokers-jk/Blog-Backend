@@ -1,7 +1,7 @@
-package org.example.blog.blogweb.model;
+package org.example.blog.web.model;
 
-import jakarta.validation.constraints.*;
 import lombok.Data;
+import javax.validation.constraints.*;
 
 @Data
 public class User {
